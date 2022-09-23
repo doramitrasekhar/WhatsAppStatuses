@@ -14,3 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "WhatsAppStatuses"
 include ':app'
+include ':data'
+include ':data'
+include ':domain'
