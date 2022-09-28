@@ -7,22 +7,34 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.ddroidapps.whatsappstatuses.presentation.FirstFragment"
+        android:name="com.ddroidapps.whatsappstatuses.presentation.WhatsappImagesFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        tools:layout="@layout/whatsapp_images_list">
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_FirstFragment_to_imageViewer"
+            app:destination="@id/imageViewer" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.ddroidapps.whatsappstatuses.presentation.SecondFragment"
+        android:name="com.ddroidapps.whatsappstatuses.presentation.WhatsappVideoFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
+        tools:layout="@layout/whatsapp_video_list"/>
+    <fragment
+        android:id="@+id/imageViewer"
+        android:name="com.ddroidapps.whatsappstatuses.presentation.WhatsAppImageViewer"
+        android:label="ImageViewer" />
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/mainActivity">
+        <activity
+            android:id="@+id/mainActivity"
+            android:name="com.ddroidapps.whatsappstatuses.presentation.WhatsAppStatusesMainActivity"
+            android:label="activity_main"
+            tools:layout="@layout/whatsapp_statuses_main" />
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            android:id="@+id/action_global_FirstFragment"
             app:destination="@id/FirstFragment" />
-    </fragment>
+        <action
+            android:id="@+id/action_global_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </navigation>
 </navigation>

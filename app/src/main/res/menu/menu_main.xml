@@ -1,10 +1,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.ddroidapps.whatsappstatuses.presentation.MainActivity">
+    tools:context="com.ddroidapps.whatsappstatuses.presentation.WhatsAppStatusesMainActivity">
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:id="@+id/action_download"
+        android:icon="@drawable/ic_baseline_arrow_downward_24"
+        app:showAsAction="ifRoom"
+        android:title="Add">
+    </item>
 </menu>
